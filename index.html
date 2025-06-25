@@ -1,12 +1,658 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Simple Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yochana Renuka Kodam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f0f;
+            color: white;
+            line-height: 1.6;
+        }
+
+        nav {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            background-color: #121212;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        
+
+
+
+
+        .hero {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-items: center;
+            padding: 4rem 10rem;
+            color: white;
+            /* ensure text is readable */
+            z-index: 0;
+            /* needed for stacking */
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url('https://www.shutterstock.com/shutterstock/videos/1038813914/thumb/1.jpg?ip=x480');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            opacity: 0.25;
+            /* 👈 Adjust background opacity */
+            z-index: -1;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #d1d5db;
+            margin-bottom: 2rem;
+        }
+
+        .socials {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .socials a {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .socials a:hover {
+            color: #6366f1;
+        }
+
+        .hero-img {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .hero-img img {
+            width: 320px;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        #contact {
+            background-color: #121212;
+            padding: 4rem 3rem;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #contact p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        #contact .email-box {
+            display: inline-block;
+            background-color: rgb(250, 245, 245);
+            color: #000;
+            padding: 0.5rem;
+            border-radius: 8px;
+            font-weight: 800;
+            padding-top: 0rem;
+            padding-bottom: 0.5rem;
+        }
+
+
+        #contact a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        #contact .socials {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #121212;
+            color: #888;
+        }
+
+        @keyframes skillFloat {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(15%, -10%);
+            }
+        }
+
+        @keyframes eduFloat {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(-10%, 10%);
+            }
+        }
+    </style> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f0f;
+            color: white;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            background-color: #121212;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+
+        nav h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                padding: 2rem 1rem;
+            }
+
+            .hero-text,
+            .hero-img {
+                max-width: 100%;
+                flex: 1 1 100%;
+                text-align: center;
+            }
+
+            .hero-img {
+                margin-top: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                padding-top: 1rem;
+                align-items: flex-start;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .hero {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 10rem;
+            color: white;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url('https://www.shutterstock.com/shutterstock/videos/1038813914/thumb/1.jpg?ip=x480');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            opacity: 0.25;
+            z-index: -1;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #d1d5db;
+            margin-bottom: 2rem;
+        }
+
+        .socials {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 1.5rem;
+            justify-content: center;
+        }
+
+        .socials a {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .socials a:hover {
+            color: #6366f1;
+        }
+
+        .hero-img {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .hero-img img {
+            width: 320px;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        #contact {
+            background-color: #121212;
+            padding: 4rem 3rem;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #contact p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        #contact .email-box {
+            display: inline-block;
+            background-color: rgb(250, 245, 245);
+            color: #000;
+            padding: 0.5rem;
+            border-radius: 8px;
+            font-weight: 800;
+            padding-top: 0rem;
+            padding-bottom: 0.5rem;
+        }
+
+        #contact a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        #contact .socials {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #121212;
+            color: #888;
+        }
+
+        @keyframes skillFloat {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(15%, -10%);
+            }
+        }
+
+        @keyframes eduFloat {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(-10%, 10%);
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Hello Vercel!</h1>
-  <a href="./index2.html">isha</a>
+    <nav>
+        <a href="new.html" style="color: white; text-decoration: none;">Yochana Kodam</a>
+
+        <ul>
+            <li><a href="new.html#work">My Work</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="new2.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Hello, Yochana here! 👋</h1>
+            <p>I’m a ✏️ UI/UX Designer with over 6+ years of experience crafting seamless digital experiences for
+                financial and enterprise platforms. I love turning complex challenges into clean, accessible interfaces.
+            </p>
+            <p>Let's build something great together!</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1.5rem;">
+                <a href="https://example.com/Resume-Yochana-Kodam.pdf" target="_blank"
+                    style="background-color: white; color: black; padding: 0.7rem 1.5rem; border-radius: 20px; text-decoration: none; font-weight: 600;">
+                    Resume
+                </a>
+                <a href="mailto:yochanakr@gmail.com"
+                    style="background-color: white; color: black; padding: 0.7rem 1.5rem; border-radius: 20px; text-decoration: none; font-weight: 600;">
+                    Email Me
+                </a>
+            </div>
+
+        </div>
+        <div class="hero-img">
+            <img src="https://www.exude.in/cdn/shop/products/DSC_2924.jpg?v=1749122101&width=1100">
+        </div>
+    </section>
+
+    <div id="work">
+        <section style="padding: 6rem 2rem; background-color: rgb(26, 25, 25);">
+            
+            <div
+                style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 3rem;">
+                <div
+                    style="flex: 1 1 500px; background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
+                    <h2 style="font-size: 3rem; font-weight: 800; color: #3b3b3b; margin-bottom: 1rem;">01</h2>
+                    <h3 style="font-size: 2rem; color: #1f2937; margin-bottom: 1rem;">Investment Dashboard</h3>
+                    <p style="font-size: 1rem; color: #4b5563; margin-bottom: 1.5rem; line-height: 1.8;">
+                        Redesigned the investment dashboard for Betterment to enhance financial data visualization and
+                        user interaction.
+                        Improved engagement by 28% through better UI hierarchy, responsive layouts, and accessibility
+                        compliance.
+                    </p>
+
+                </div>
+                <div style="flex: 1 1 500px; text-align: center;">
+                    <img src="https://api.onlinejain.com/media/elective/mobile_banner/Finance.webp" alt="Investment Dashboard"
+                    style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; max-width: 480px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);">
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 6rem 2rem; background-image: url('https://static.vecteezy.com/system/resources/thumbnails/043/639/714/small_2x/crumpled-and-folded-black-paper-texture-images-for-background-logo-text-template-design-photo.jpg'); background-repeat: no-repeat; background-size: cover;
+  background-position: center; color: #0f0f0f;">
+            <div
+                style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 3rem;">
+                <div style="flex: 1 1 500px; text-align: center;">
+                    <img src="https://depositphotos-blog.s3.eu-west-1.amazonaws.com/uploads/2019/04/Depositphotos_209179682_m-2015.jpg" alt="HR Portal Modernization"
+                    style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; max-width: 480px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);">
+                </div>
+                <div
+                    style="flex: 1 1 500px; background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
+                    <h2 style="font-size: 3rem; font-weight: 800; color: #3b3b3b; margin-bottom: 1rem;">02</h2>
+                    <h3 style="font-size: 2rem; color: #1f2937; margin-bottom: 1rem;">HR Portal Modernization</h3>
+                    <p style="font-size: 1rem; color: #4b5563; margin-bottom: 1.5rem; line-height: 1.8;">
+                        Designed and modernized a self-service HR portal for a Fortune 500 client at Accenture using
+                        Figma and Adobe XD.
+                        Achieved a 40% reduction in support queries and improved usability for over 20,000 internal
+                        users through clean design,
+                        accessibility compliance, and persona-based workflows.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 6rem 2rem;  background-color: rgb(26, 25, 25);">
+            <div
+                style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 3rem;">
+
+                <div
+                    style="flex: 1 1 500px; background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
+                    <h2 style="font-size: 3rem; font-weight: 800; color: #3b3b3b; margin-bottom: 1rem;">03</h2>
+                    <h3 style="font-size: 2rem; color: #1f2937; margin-bottom: 1rem;">Mobile Banking App Redesign</h3>
+                    <p style="font-size: 1rem; color: #4b5563; margin-bottom: 1.5rem; line-height: 1.8;">
+                        Led the end-to-end UI revamp of IndusInd Bank’s mobile banking app. Enhanced user navigation,
+                        reduced cognitive load, and ensured full WCAG 2.1 compliance. Collaborated with developers to
+                        build responsive interfaces and improved app ratings by 22%.
+                    </p>
+
+                </div>
+                <div style="flex: 1 1 500px; text-align: center;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrkS8TeaSB-vI9nipe4WwV1asAwYbjKH7qYToL_MirpV3nNQ8VI-R1M01UjkJXxyz8ZjU&usqp=CAU" alt="Mobile Banking Redesign"
+                    style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; max-width: 480px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);">
+                </div>
+            </div>
+            <div
+                style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 40% 40%, #fef3c7 0%, transparent 40%), radial-gradient(circle at 70% 60%, #fcd34d 0%, transparent 40%); animation: floatBG 20s linear infinite alternate; z-index: 0; opacity: 0.08;">
+            </div>
+        </section>
+
+
+
+
+    </div>
+
+    <!-- Technical Skills Section -->
+    <section style="padding: 5rem 2rem; background-image: url('https://static.vecteezy.com/system/resources/thumbnails/043/639/714/small_2x/crumpled-and-folded-black-paper-texture-images-for-background-logo-text-template-design-photo.jpg'); background-repeat: no-repeat; background-size: cover;
+  background-position: center; color: white; text-align: center; position: relative; overflow: hidden;">
+        <div
+            style="position: absolute; top: -40%; left: -40%; width: 180%; height: 180%; background: radial-gradient(circle at 40% 40%, #38bdf8 0%, transparent 40%), radial-gradient(circle at 70% 70%, #4f46e5 0%, transparent 40%); opacity: 0.1; animation: skillFloat 20s infinite alternate ease-in-out; z-index: 0;">
+        </div>
+        <style>
+            @keyframes skillFloat {
+                0% {
+                    transform: translate(0, 0);
+                }
+
+                100% {
+                    transform: translate(15%, -10%);
+                }
+            }
+        </style>
+        <div style="position: relative; z-index: 1;">
+            <h2 style="font-size: 2rem; margin-bottom: 2rem;">Technical Skills</h2>
+            <div
+                style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1000px; margin: auto;">
+                <div style="flex: 1 1 200px;">
+                    <h3 style="margin-bottom: 0.5rem; color: #38bdf8;">Design Tools</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>Figma</li>
+                        <li>Adobe XD</li>
+                        <li>Sketch</li>
+                        <li>InVision</li>
+                        <li>Framer</li>
+                    </ul>
+                </div>
+                <div style="flex: 1 1 200px;">
+                    <h3 style="margin-bottom: 0.5rem; color: #38bdf8;">Front-end</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>HTML5, CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>TypeScript</li>
+                        <li>React, Vue, Angular</li>
+                    </ul>
+                </div>
+                <div style="flex: 1 1 200px;">
+                    <h3 style="margin-bottom: 0.5rem; color: #38bdf8;">UX Research</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>User Interviews</li>
+                        <li>A/B Testing</li>
+                        <li>Heuristic Evaluation</li>
+                        <li>Personas</li>
+                    </ul>
+                </div>
+                <div style="flex: 1 1 200px;">
+                    <h3 style="margin-bottom: 0.5rem; color: #38bdf8;">Collaboration</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>Jira</li>
+                        <li>Confluence</li>
+                        <li>Git/GitHub</li>
+                        <li>Slack</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section
+        style="padding: 5rem 2rem; background: linear-gradient(135deg, #1f1f1f, #0f0f0f); color: white; text-align: center; position: relative; overflow: hidden;">
+        <div
+            style="position: absolute; top: -40%; right: -40%; width: 180%; height: 180%; background: radial-gradient(circle at 60% 60%, #170f1f 0%, transparent 40%), radial-gradient(circle at 30% 30%, #a855f7 0%, transparent 40%); opacity: 0.08; animation: eduFloat 25s ease-in-out infinite alternate; z-index: 0;">
+        </div>
+        <style>
+            @keyframes eduFloat {
+                0% {
+                    transform: translate(0, 0);
+                }
+
+                100% {
+                    transform: translate(-10%, 10%);
+                }
+            }
+        </style>
+        <div style="position: relative; z-index: 1;">
+            <h2 style="font-size: 2rem; margin-bottom: 2rem;">Education</h2>
+            <div style="max-width: 800px; margin: auto;">
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 0.5rem;">MS in Computer Science</h3>
+                    <p style="color: #d1d5db;">University of Bridgeport, Connecticut, USA</p>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">BTech in Computer Science</h3>
+                    <p style="color: #d1d5db;">Malla Reddy Institute of Technology, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact">
+
+        <h2>Get in touch</h2>
+        <div class="email-box">
+            <a href="mailto:yochanakr@gmail.com" style="color: black; text-decoration: none;">
+                Send Message
+            </a>
+        </div>
+
+        <p><a href="#">📄 Resume</a></p>
+        <div class="socials">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 Yochana Renuka Kodam. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
