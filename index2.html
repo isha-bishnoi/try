@@ -8,41 +8,94 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #0f0f0f;
-      color: white;
-    }
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 3rem;
-      background-color: #121212;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    nav h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
+    /* Sticky Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
+        /* Logo */
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
+        /* Nav Links */
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
 
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Hamburger & Close Icons */
+        .hamburger,
+        .close-icon {
+            font-size: 1.8rem;
+            display: none;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #121212;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem 2rem;
+                gap: 1.5rem;
+                display: none;
+                width: 100%;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .close-icon {
+                display: none;
+                position: absolute;
+                top: 1.2rem;
+                right: 2rem;
+            }
+
+            .close-icon.active {
+                display: block;
+            }
+        }
 
     .contact-header {
       text-align: center;
@@ -125,15 +178,17 @@
 </head>
 
 <body>
-    <nav>
-        <a href="new.html" style="color: white; text-decoration: none;">Yochana Kodam</a>
-    
-        <ul>
-          <li><a href="./new.html#work">My Work</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="new2.html">Contact</a></li>
-        </ul>
-      </nav>
+    <header class="navbar">
+        <a href="isha.html" style="color: white; text-decoration: none;">Yochana Kodam</a>
+
+        <nav class="nav-links" id="navMenu">
+            <a href="isha.html#work">My Work</a>
+            <a href="#">Resume</a>
+            <a href="index2.html">Contact</a>
+        </nav>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <div class="close-icon" id="closeIcon">&times;</div>
+    </header>
 
   <header class="contact-header">
     <h1>Connect with me :)</h1>
@@ -180,10 +235,23 @@
     </p>
   </section>
 
+   <script>
+        const hamburger = document.getElementById('hamburger');
+        const closeIcon = document.getElementById('closeIcon');
+        const navMenu = document.getElementById('navMenu');
 
-  <footer>
-    <p>&copy; 2025 Yochana Renuka Kodam. All rights reserved.</p>
-  </footer>
-</body>
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.add('active');
+            hamburger.style.display = 'none';
+            closeIcon.classList.add('active');
+        });
+
+        closeIcon.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            hamburger.style.display = 'block';
+            closeIcon.classList.remove('active');
+        });
+    </script>
+
 
 </html>
