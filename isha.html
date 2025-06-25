@@ -235,113 +235,114 @@
         }
 
         /* Wrapper for the whole section */
-.work-vertical-wrapper {
-  padding: 4rem 1.5rem;
-  background-color: #1a1919;
-  max-width: 1200px;
-  margin: auto;
-  box-sizing: border-box;
-}
+        .work-vertical-wrapper {
+            padding: 4rem 1.5rem;
+            background-color: #1a1919;
+            max-width: 1200px;
+            margin: auto;
+            box-sizing: border-box;
+        }
 
-/* Each project block */
-.project {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 4rem;
-  gap: 2rem;
-}
+        /* Each project block */
+        .project {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 4rem;
+            gap: 2rem;
+        }
 
-/* Alternate direction for middle project (you already use this in HTML) */
-.project:nth-child(even) {
-  flex-direction: row-reverse;
-}
+        /* Alternate direction for middle project (you already use this in HTML) */
+        .project:nth-child(even) {
+            flex-direction: row-reverse;
+        }
 
-/* Text container */
-.project-text {
-  flex: 1 1 500px;
-  min-width: 280px;
-}
+        /* Text container */
+        .project-text {
+            flex: 1 1 500px;
+            min-width: 280px;
+        }
 
-/* Project number */
-.project-number {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #00d1b2;
-  margin-bottom: 1rem;
-}
+        /* Project number */
+        .project-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #00d1b2;
+            margin-bottom: 1rem;
+        }
 
-/* Title */
-.project-title {
-  font-size: 2rem;
-  color: #ffffff;
-  margin-bottom: 1rem;
-}
+        /* Title */
+        .project-title {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
 
-/* Description */
-.project-description {
-  font-size: 1rem;
-  color: #d1d5db;
-  line-height: 1.8;
-}
+        /* Description */
+        .project-description {
+            font-size: 1rem;
+            color: #d1d5db;
+            line-height: 1.8;
+        }
 
-/* Case study link */
-.case-study-link {
-  display: inline-block;
-  margin-top: 1.2rem;
-  color: #00d1b2;
-  font-weight: 500;
-  text-decoration: underline;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
+        /* Case study link */
+        .case-study-link {
+            display: inline-block;
+            margin-top: 1.2rem;
+            color: #00d1b2;
+            font-weight: 500;
+            text-decoration: underline;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
 
-.case-study-link:hover {
-  color: #00bfa6;
-}
+        .case-study-link:hover {
+            color: #00bfa6;
+        }
 
-/* Image container */
-.project-image {
-  flex: 1 1 500px;
-  min-width: 150px;
-  text-align: center;
-}
+        /* Image container */
+        .project-image {
+            flex: 1 1 500px;
+            min-width: 150px;
+            text-align: center;
+        }
 
-.project-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  object-fit: cover;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
+        .project-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
 
-/* Responsive layout */
-@media (max-width: 768px) {
-  .project {
-    flex-direction: column !important; /* Override alternation on smaller screens */
-    text-align: center;
-  }
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column !important;
+                /* Override alternation on smaller screens */
+                text-align: center;
+            }
 
-  .project-text,
-  .project-image {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
+            .project-text,
+            .project-image {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
 
-  .project-title {
-    font-size: 1.5rem;
-  }
+            .project-title {
+                font-size: 1.5rem;
+            }
 
-  .project-number {
-    font-size: 2.5rem;
-  }
+            .project-number {
+                font-size: 2.5rem;
+            }
 
-  .project-description,
-  .case-study-link {
-    font-size: 0.95rem;
-  }
-}
+            .project-description,
+            .case-study-link {
+                font-size: 0.95rem;
+            }
+        }
 
         /* Mobile responsiveness already handled with previous media query */
     </style>
@@ -401,7 +402,7 @@
                 </div>
             </div>
             <div class="project">
-                
+
                 <div class="project-text">
                     <h2 class="project-number">02</h2>
                     <h3 class="project-title">HR Portal Modernization</h3>
@@ -429,7 +430,8 @@
                         reduced cognitive load, and ensured full WCAG 2.1 compliance. Collaborated with developers to
                         build responsive interfaces and improved app ratings by 22%.
                     </p>
-                    <a href="https://www.figma.com/design/L6eModl59e2OhfmVS9c8z5/MOBILE-APP-REDESIGN?node-id=2-2" class="case-study-link">View complete UX case study →</a>
+                    <a href="https://www.figma.com/design/L6eModl59e2OhfmVS9c8z5/MOBILE-APP-REDESIGN?node-id=2-2"
+                        class="case-study-link">View complete UX case study →</a>
                 </div>
                 <div class="project-image">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrkS8TeaSB-vI9nipe4WwV1asAwYbjKH7qYToL_MirpV3nNQ8VI-R1M01UjkJXxyz8ZjU&usqp=CAU"
