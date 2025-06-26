@@ -234,115 +234,90 @@
             gap: 1.5rem;
         }
 
-        /* Wrapper for the whole section */
-        .work-vertical-wrapper {
-            padding: 4rem 1.5rem;
-            background-color: #1a1919;
-            max-width: 1200px;
-            margin: auto;
-            box-sizing: border-box;
-        }
+        #work {
+  padding: 4rem;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 4rem;
+}
 
-        /* Each project block */
-        .project {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 4rem;
-            gap: 2rem;
-        }
+.work-vertical-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
 
-        /* Alternate direction for middle project (you already use this in HTML) */
-        .project:nth-child(even) {
-            flex-direction: row-reverse;
-        }
+.project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
-        /* Text container */
-        .project-text {
-            flex: 1 1 500px;
-            min-width: 280px;
-        }
+.project-text {
+  flex: 1 1 400px;
+}
 
-        /* Project number */
-        .project-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #00d1b2;
-            margin-bottom: 1rem;
-        }
+.project-image {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16 / 9; /* Ensures uniform height across all */
+  overflow: hidden;
+  border-radius: 10px;
+}
 
-        /* Title */
-        .project-title {
-            font-size: 2rem;
-            color: #ffffff;
-            margin-bottom: 1rem;
-        }
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes all images fill the box uniformly */
+  display: block;
+  border-radius: 10px;
+}
 
-        /* Description */
-        .project-description {
-            font-size: 1rem;
-            color: #d1d5db;
-            line-height: 1.8;
-        }
 
-        /* Case study link */
-        .case-study-link {
-            display: inline-block;
-            margin-top: 1.2rem;
-            color: #00d1b2;
-            font-weight: 500;
-            text-decoration: underline;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
+/* Text Styling */
+.project-number {
+  font-size: 2rem;
+  color: white;
+}
 
-        .case-study-link:hover {
-            color: #00bfa6;
-        }
+.project-title {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+  color: white;
+}
 
-        /* Image container */
-        .project-image {
-            flex: 1 1 500px;
-            min-width: 150px;
-            text-align: center;
-        }
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 1rem;
+}
 
-        .project-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            object-fit: cover;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-        }
+.case-study-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-        /* Responsive layout */
-        @media (max-width: 768px) {
-            .project {
-                flex-direction: column !important;
-                /* Override alternation on smaller screens */
-                text-align: center;
-            }
+/* Responsive Handling */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    text-align: left;
+  }
 
-            .project-text,
-            .project-image {
-                flex: 1 1 100%;
-                max-width: 100%;
-            }
+  .project-text,
+  .project-image {
+    flex: 1 1 100%;
+  }
 
-            .project-title {
-                font-size: 1.5rem;
-            }
-
-            .project-number {
-                font-size: 2.5rem;
-            }
-
-            .project-description,
-            .case-study-link {
-                font-size: 0.95rem;
-            }
-        }
+  #work {
+    padding: 1rem;
+  }
+}
 
         /* Mobile responsiveness already handled with previous media query */
     </style>
